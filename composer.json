@@ -1,0 +1,12 @@
+{
+	"name": "sugardev/wp-boilerplate",
+	"type": "wordpress-muplugin",
+	"require": {
+		"composer/installers": "1.*"
+	},
+	"autoload": {
+	    "psr-4": {
+	      "Sugardev\\Boilerplate\\":"classes/"
+	    }
+  	}
+}

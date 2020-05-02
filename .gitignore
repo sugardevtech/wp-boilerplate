@@ -1,0 +1,14 @@
+# ignore log files
+**/*.log
+# ignore MAC files
+**/*.DS_Store
+# ignore cache
+**/cache/
+# ignore sass
+# ignore composer dependencies
+vendor/
+
+tests/_output/*
+
+# ignore built files
+assets/*/js/*.min.js
