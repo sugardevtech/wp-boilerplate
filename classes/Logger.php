@@ -13,7 +13,7 @@ class Logger {
 	}
 
 	public function log( $msg, $var_dump = false ) {
-		$msg = $this->name ? "({$name}) $msg" : $msg;
+		$msg = $this->name ? "({$this->name}) $msg" : $msg;
 		if ( $var_dump ) {
 			var_dump( $msg );
 			return;
