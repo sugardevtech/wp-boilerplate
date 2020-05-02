@@ -13,16 +13,15 @@ class Logger {
 	}
 
 	public function log( $msg, $var_dump = false ) {
-		$msg = $this->name ? "({$this->name}) $msg" : $msg;
 		if ( $var_dump ) {
 			var_dump( $msg );
 			return;
 		}
 		if ( is_array( $msg ) || is_object( $msg ) ) {
-			error_log( "\n\r" . print_r( $msg, true ) . "\n\r" );
+			error_log( "\n\r" . "({$this->name}) : " . print_r( $msg, true ) . "\n\r" );
 		}
 		else {
-			error_log( "\n\r" . $msg . "\n\r" );
+			error_log( "\n\r" . "({$this->name}) : $msg" . "\n\r" );
 		}
 	}
 }
