@@ -79,7 +79,7 @@ abstract class RepoBase {
 		$this->filename = $file;
 		$this->name = $name;
 		$this->title = $title;
-		$this->logger new Logger( $name );
+		$this->logger = new Logger( $name );
 		$this->views = new Views( $this->dir );
 		// check dependencies, possibly display notice
 		if( ! $this->load_dependencies() ) {
