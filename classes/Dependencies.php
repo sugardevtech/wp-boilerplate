@@ -21,7 +21,7 @@ class Dependencies {
 	 * Set plugin
 	 */
 	public function __construct( RepoBase $plugin ) {
-		$this->plugin = $plugin;
+		$this->repo = $plugin;
 	}
 	/**
 	 * Check for plugin and theme dependencies
@@ -41,8 +41,8 @@ class Dependencies {
 	 */
 	public function loaded() {
 		$dependencies_loaded = true;
-		$dependencies = $this->plugin->dependencies;
-		$plugin_name = $this->plugin->name;
+		$dependencies = $this->repo->dependencies;
+		$plugin_name = $this->repo->name;
 		// no required dependencies
 		if( ! isset( $dependencies ) || ! is_array( $dependencies ) ) {
 			return $dependencies_loaded;

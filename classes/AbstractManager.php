@@ -9,7 +9,7 @@ abstract class AbstractManager {
 	protected $plugin;
 	public function __construct( $plugin ) {
 		global $wpdb;
-		$this->plugin = $plugin;
+		$this->repo = $plugin;
 		$this->wpdb = $wpdb;
 	}
 
@@ -24,6 +24,6 @@ abstract class AbstractManager {
 	 * Log messages
 	 */
 	protected function log( $msg ) {
-		$this->plugin->log( $msg );
+		$this->repo->log( $msg );
 	}
 }
