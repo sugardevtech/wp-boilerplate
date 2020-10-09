@@ -18,7 +18,7 @@ abstract class AbstractSchemaManager {
 				sprintf(
 					"CREATE TABLE %s (%s) %s;",
 					$table,
-					implode( ',', $lines ),
+					implode( ",\n", $lines ),
 					$this->get_collation()
 				)
 			);
